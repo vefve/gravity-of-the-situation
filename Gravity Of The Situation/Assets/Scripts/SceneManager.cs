@@ -5,6 +5,9 @@ using System.Collections.Generic;
 public class SceneManager : MonoBehaviour {
     public List<Transform>[,] sceneMap;
     public Transform WallPrefab;
+    public GameObject PlayerCharacterPrefab;
+    public GameObject PlayerCharacterReference;
+    public Vector3 LevelSpawnPoint;
     public int MapLength = 16;
     public int MapHeight = 16;
     private float scalingFactor = 0.8f;
@@ -20,10 +23,12 @@ public class SceneManager : MonoBehaviour {
                 }
             }
         }
+
+        PlayerCharacterReference = (GameObject)Instantiate(PlayerCharacterPrefab, LevelSpawnPoint, new Quaternion());
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+	    
 	}
 }
