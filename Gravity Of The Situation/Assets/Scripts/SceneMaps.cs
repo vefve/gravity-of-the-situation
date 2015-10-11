@@ -24,8 +24,28 @@ public class SceneMaps {
 		List<Transform>[,] CurrentScene = new List<Transform>[length, height];
 		for (var x = 0; x < 16; x++) {
 			for (var y = 0; y < 16; y++) {
-				CurrentScene[x,y] = new List<Transform>(new Transform[] { WallPrefab });
+				if (x == 0 || x == 15 || y == 0 || y == 15)
+					CurrentScene[x,y] = new List<Transform>(new Transform[] { WallPrefab });
 			}
+		}
+		
+		int i;
+		int j;
+		
+		for (i = 1, j = 3; i < 6; i++) {
+			CurrentScene[i,j] = new List<Transform>(new Transform[] { WallPrefab });
+		}
+
+		for (i = 1, j = 11; i < 7; i++) {
+			CurrentScene[i,j] = new List<Transform>(new Transform[] { WallPrefab });
+		}
+		
+		for (i = 14, j = 7; i > 9; i--) {
+			CurrentScene[i,j] = new List<Transform>(new Transform[] { WallPrefab });
+		}
+		
+		for (i = 11, j = 1; j < 5; j++) {
+			CurrentScene[i,j] = new List<Transform>(new Transform[] { WallPrefab });
 		}
 		return CurrentScene;
 	}
