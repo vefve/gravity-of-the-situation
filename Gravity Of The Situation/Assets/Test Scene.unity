@@ -210,14 +210,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 149702, guid: 236a90efe01f84595956006e9ee7fd7d, type: 2}
-      propertyPath: m_Name
-      value: Spikes Top
-      objectReference: {fileID: 0}
-    - target: {fileID: 6812130, guid: 236a90efe01f84595956006e9ee7fd7d, type: 2}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 236a90efe01f84595956006e9ee7fd7d, type: 2}
   m_IsPrefabParent: 0

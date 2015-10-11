@@ -12,11 +12,4 @@ public class PlayerController : MonoBehaviour {
 	void Update () {
 	
 	}
-
-	void OnCollisionEnter2D(Collision2D collision) {
-		Debug.Log("Lo");
-		if(collision.gameObject.tag == "Player") {
-			Destroy(collision.gameObject);
-		}
-	}
 }

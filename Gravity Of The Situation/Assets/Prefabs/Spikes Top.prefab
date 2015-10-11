@@ -11,6 +11,7 @@ GameObject:
   - 50: {fileID: 5031730}
   - 68: {fileID: 6812130}
   - 212: {fileID: 21264166}
+  - 114: {fileID: 11441184}
   m_Layer: 0
   m_Name: Spikes Top
   m_TagString: Untagged
@@ -58,8 +59,19 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   m_Points:
-  - {x: -.400324821, y: .399300575}
-  - {x: .396703482, y: .398690701}
+  - {x: -.368873119, y: .399300575}
+  - {x: .360009909, y: .398690701}
+--- !u!114 &11441184
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 149702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 224def850d819415ca0d50ba833dcedd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &21264166
 SpriteRenderer:
   m_ObjectHideFlags: 1
