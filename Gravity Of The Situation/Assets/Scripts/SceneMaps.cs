@@ -3,13 +3,15 @@ using System.Collections.Generic;
 
 public class SceneMaps {
 	private Transform WallPrefab;
+	private Transform SpikesTopPrefab;
 	private List<Transform>[,] CurrentScene;
 	private int length;
 	private int height;
-	public SceneMaps(int length, int height, Transform wallPrefab) {
+	public SceneMaps(int length, int height, Transform wallPrefab, Transform spikesTopPrefab) {
 		this.length = length;
 		this.height = height;
         this.WallPrefab = wallPrefab;
+		this.SpikesTopPrefab = spikesTopPrefab;
 		CurrentScene = new List<Transform>[length, height];
 		for (int i = 0; i < length; i++)
 		{
@@ -44,9 +46,10 @@ public class SceneMaps {
 			CurrentScene[i,j] = new List<Transform>(new Transform[] { WallPrefab });
 		}
 		
-		for (i = 11, j = 1; j < 5; j++) {
+		for (i = 11, j = 1; j < 4; j++) {
 			CurrentScene[i,j] = new List<Transform>(new Transform[] { WallPrefab });
 		}
+		CurrentScene[i,j] = new List<Transform>(new Transform[] { SpikesTopPrefab });
 		return CurrentScene;
 	}
 }

@@ -12,7 +12,9 @@ GameObject:
   - 61: {fileID: 6178588}
   - 50: {fileID: 5075676}
   - 114: {fileID: 11469288}
-  - 114: {fileID: 11473116}
+  - 114: {fileID: 11479626}
+  - 95: {fileID: 9520708}
+  - 114: {fileID: 11457002}
   m_Layer: 8
   m_Name: Player Character
   m_TagString: Untagged
@@ -27,7 +29,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 137836}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.1500001, y: 3.23000002, z: 0}
+  m_LocalPosition: {x: .12947607, y: 3.20071006, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -60,7 +62,35 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: .550000012, y: .660000026}
+--- !u!95 &9520708
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 137836}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1287e2f0113b54078a4cf7fe4ef3c4b8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11457002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 137836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6211c69e904e6484d93a55a96b01512e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11469288
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -107,7 +137,7 @@ MonoBehaviour:
     m_PostInfinity: 2
   totalHorizontalRays: 8
   totalVerticalRays: 4
---- !u!114 &11473116
+--- !u!114 &11479626
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -115,14 +145,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 137836}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 727627073f093ac4fb041950c094547e, type: 3}
+  m_Script: {fileID: 11500000, guid: 50effa1f968e34abca1c48e9ebeba4f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gravity: -25
   runSpeed: 8
   groundDamping: 20
   inAirDamping: 5
-  jumpHeight: 3
+  jumpHeight: 5
 --- !u!212 &21238516
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -147,7 +177,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d2f88f58bf444f3438849246f35db1e7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0370ca45554824e75921d7740a78749e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
@@ -159,6 +189,19 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Constraints
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 1287e2f0113b54078a4cf7fe4ef3c4b8, type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0370ca45554824e75921d7740a78749e,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: jumpHeight
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

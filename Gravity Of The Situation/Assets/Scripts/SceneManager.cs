@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public class SceneManager : MonoBehaviour {
     public List<Transform>[,] sceneMap;
     public Transform WallPrefab;
+	public Transform SpikesTopPrefab;
     public GameObject PlayerCharacterPrefab;
     public GameObject PlayerCharacterReference;
     public Vector3 LevelSpawnPoint;
@@ -13,7 +14,7 @@ public class SceneManager : MonoBehaviour {
     private float scalingFactor = 0.8f;
 	// Use this for initialization
 	void Start () {
-        sceneMap = new SceneMaps(MapLength, MapHeight, WallPrefab).getScene1();
+		sceneMap = new SceneMaps(MapLength, MapHeight, WallPrefab, SpikesTopPrefab).getScene1();
         for (int x = 0; x < MapLength; x++)
         {
             for (int y = 0; y < MapHeight; y++)
