@@ -13,13 +13,13 @@ public class SceneManager : MonoBehaviour {
     private float scalingFactor = 0.8f;
 	// Use this for initialization
 	void Start () {
-        sceneMap = new SceneMaps(MapLength, MapHeight).getScene1();
+        sceneMap = new SceneMaps(MapLength, MapHeight, WallPrefab).getScene1();
         for (int x = 0; x < MapLength; x++)
         {
             for (int y = 0; y < MapHeight; y++)
             {
-                if (sceneMap[x, y] != null) {
-                    Instantiate(sceneMap[x,y][1], new Vector3(x * scalingFactor, y * scalingFactor, 0), Quaternion.identity);
+                if (sceneMap[x, y] != null && sceneMap[x, y][0] != null) {
+                    Instantiate(sceneMap[x,y][0], new Vector3(x * scalingFactor, y * scalingFactor, 0), Quaternion.identity);
                 }
             }
         }

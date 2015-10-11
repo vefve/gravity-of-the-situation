@@ -6,9 +6,10 @@ public class SceneMaps {
 	private List<Transform>[,] CurrentScene;
 	private int length;
 	private int height;
-	public SceneMaps(int length, int height) {
+	public SceneMaps(int length, int height, Transform wallPrefab) {
 		this.length = length;
 		this.height = height;
+        this.WallPrefab = wallPrefab;
 		CurrentScene = new List<Transform>[length, height];
 		for (int i = 0; i < length; i++)
 		{
